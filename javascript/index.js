@@ -41,52 +41,51 @@ var list =  [
         image: '/img/product_1.png',
         title: 'Nem phượng hoàng',
         description: 'Là đặc sản nổi tiếng của Hà Nội, với hương vị hết sức là thân quen!',
-        money: '500.000 vnđ',
+        money: '350.000 vnđ',
         fullstar: '<i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>',
         halfstar: '<i class="fa-solid fa-star-half-stroke"></i>',
         value: '1'
     }),
 listFood({
         image: '/img/product_2.png',
-        title: 'Nem phượng hoàng',
-        description: 'Là đặc sản nổi tiếng của Hà Nội, với hương vị hết sức là thân quen!',
-        money: '500.000 vnđ',
-        fullstar: '<i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>',
+        title: 'Trứng vàng kin lâu',
+        description: 'Một loại trứng đáng rất được giới tài phiệt săn đón cho mỗi buổi sáng',
+        money: '550.000 vnđ',
+        fullstar: '<i class="fa-solid fa-star"></i>  <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>',
         halfstar: '<i class="fa-solid fa-star-half-stroke"></i>',
     value: '2'
     }),
     listFood({
         image: '/img/product_3.png',
-        title: 'Nem phượng hoàng',
-        description: 'Là đặc sản nổi tiếng của Hà Nội, với hương vị hết sức là thân quen!',
-        money: '500.000 vnđ',
-        fullstar: '<i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>',
-        halfstar: '<i class="fa-solid fa-star-half-stroke"></i>',
+        title: 'Salad tây âu',
+        description: 'Là món ăn nhanh rất được ưa chuộng vào mỗi buổi sáng tại châu âu',
+        money: '290.000 vnđ',
+        fullstar: '<i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>',
         value: '3'
     }),
     listFood({
         image: '/img/product_4.png',
-        title: 'Nem phượng hoàng',
-        description: 'Là đặc sản nổi tiếng của Hà Nội, với hương vị hết sức là thân quen!',
-        money: '500.000 vnđ',
+        title: 'Humberger hoàng gia',
+        description: 'là thức ăn nhanh có từ những năm thế chiến thứ 2 còn đươc con người lưu giữ tới ngày nay ',
+        money: '999.000 vnđ',
         fullstar: '<i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>',
         halfstar: '<i class="fa-solid fa-star-half-stroke"></i>',
         value: '4'
     }),
     listFood({
         image: '/img/product_5.png',
-        title: 'Nem phượng hoàng',
-        description: 'Là đặc sản nổi tiếng của Hà Nội, với hương vị hết sức là thân quen!',
-        money: '500.000 vnđ',
+        title: 'Món ăn mắc ca ca',
+        description: 'Cực phẩn trong làng ẩm thực trung hoa, hội tụ đầy đủ hương vị dân tộc',
+        money: '99.000 vnđ',
         fullstar: '<i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>',
         halfstar: '<i class="fa-solid fa-star-half-stroke"></i>',
         value: '5'
     }),
     listFood({
         image: '/img/product_6.png',
-        title: 'Nem phượng hoàng',
-        description: 'Là đặc sản nổi tiếng của Hà Nội, với hương vị hết sức là thân quen!',
-        money: '500.000 vnđ',
+        title: 'Cá sốt ',
+        description: 'Yêu ngay từ cái nhìn đầu tiên',
+        money: '650.000 vnđ',
         fullstar: '<i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>',
         halfstar: '<i class="fa-solid fa-star-half-stroke"></i>',
         value: '6'
@@ -126,3 +125,8 @@ console.log(list.map(function(){}))
 //     })
 
 
+
+
+
+
+//  ae khac cmt nhu nay roi add vao nhe
