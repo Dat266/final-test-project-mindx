@@ -1,9 +1,21 @@
+:root {
+  --white-color: #fff;
+  --black-color: #000;
+  --background-color: #444;
+}
+
+* {
+  box-sizing: inherit;
+  margin: 0
+}
+
 body,
 html {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  background: gray;
+  font-size: 62.5%;
+    line-height: 1.6 rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+  background-color: beige;
   color: #fff;
 }
 
@@ -24,4 +36,127 @@ main {
 
 #main {
   position: absolute;
+}
+
+
+
+/* Danh sách món ăn */
+#manh {
+  text-align: center;
+  max-width: 120rem;
+  margin: auto;
+}
+
+#manh-js {
+  margin: 0px 0;
+  /* max-height: 500px; */
+  /* overflow: hidden; */
+}
+
+.manh__food {
+  width: 280px;
+  background-color: var(--background-color);
+  border-radius: 7px;
+  display: inline-block;
+  text-align: center;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  margin: 25px 15px 25px 15px;
+}
+
+.manh__food-img {
+  margin: 15px 10px;
+  cursor: pointer;
+}
+
+.manh__food-img:hover {
+  animation: imganimation linear .5s;
+
+}
+
+@keyframes imganimation {
+  to {
+      transform: translateY(0);
+  }
+  from {
+      transform: translateY(3px);
+  }
+}
+
+.manh__food-star {
+  color: yellow;
+  font-size: 15px;
+  margin-bottom: 30px;
+
+}
+
+.manh__food-star i {
+  margin: 0 5px;
+}
+
+.manh__food-title {
+  color: rgb(245, 96, 96);
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+
+.manh__food-description {
+  color: var(--white-color);
+  font-size: 15px;
+  margin: 0 10px 30px 10px;
+  text-align: justify;
+  line-height: 17px;
+  max-height: 40px;
+  font-weight: 300;
+}
+
+.manh__food-cost {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 30px 15px 30px;
+}
+
+.manh__food-cost i {
+  color: var(--white-color);
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.manh__food-cost i:hover {
+  color: yellow;
+}
+
+.manh__food-money {
+  display: inline-block;
+  color: red;
+  font-size: 15px;
+}
+
+.manh__btn {
+  /* padding-top: 100px; */
+
+}
+
+.manh__btn-list {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 20px;
+  background-color: var(--background-color);
+  color: var(--white-color);
+  margin: 20px 10px 70px;
+  cursor: pointer;
+  border: none;
+}
+
+.manh__btn-list:hover {
+  color: red;
+  background-color: #888;
+}
+.myproduct {
+  font-size: 35px;
+  color: var(--black-color);
+  font-weight: 400;
+  padding-top: 70px;
+  margin-bottom: 50px;
 }
