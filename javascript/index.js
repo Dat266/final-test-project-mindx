@@ -1,132 +1,118 @@
 // Phan manh lam
-
-function listFood ({
-    image = '',
-    title = '',
-    description = '',
-    money = '',
-    fullstar = '',
-    halfstar = '',
-    value = ''
-}) {
-    const main = document.getElementById('manh-js');
-    console.log(main)
-    if(main) {
-        const listFood = document.createElement('div');
-        listFood.classList.add('manh__food');
-        listFood.innerHTML = `
-                <img src="${image}" alt="" class="manh__food-img">
-                <div class="manh__food-star">
-                    ${fullstar}
-                    ${halfstar}
-                </div>
-                <h2 class="manh__food-title">${title}</h2>
-                <p class="manh__food-description">${description}</p>
-                <div class="manh__food-cost">
-                    <p class="manh__food-money">${money}</p>
-                    <div class="manh__food-cart" value = ${value} >
-                        <i class="fa-solid fa-cart-shopping"></i>
-                    </div>
-                </div>
-        `;
-        main.appendChild(listFood);
-
-    }
-} 
-
-
-
-var list =  [
-    listFood({
+var listFood = [
+    {
         image: '../img/product_1.png',
         title: 'Nem phượng hoàng',
         description: 'Là đặc sản nổi tiếng của Hà Nội, với hương vị hết sức là thân quen!',
         money: '350.000 vnđ',
         fullstar: '<i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>',
         halfstar: '<i class="fa-solid fa-star-half-stroke"></i>',
-        value: '1'
-    }),
-listFood({
+        id: '1'
+    },
+    {
         image: '../img/product_2.png',
         title: 'Trứng vàng kin lâu',
         description: 'Một loại trứng đáng rất được giới tài phiệt săn đón cho mỗi buổi sáng',
         money: '550.000 vnđ',
         fullstar: '<i class="fa-solid fa-star"></i>  <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>',
         halfstar: '<i class="fa-solid fa-star-half-stroke"></i>',
-    value: '2'
-    }),
-    listFood({
+        id: '2'
+    },
+    {
         image: '../img/product_3.png',
         title: 'Salad tây âu',
         description: 'Là món ăn nhanh rất được ưa chuộng vào mỗi buổi sáng tại châu âu',
         money: '290.000 vnđ',
         fullstar: '<i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>',
-        value: '3'
-    }),
-    listFood({
+        id: '3'
+    },
+    {
         image: '../img/product_4.png',
         title: 'Humberger hoàng gia',
         description: 'là thức ăn nhanh có từ những năm thế chiến thứ 2 còn đươc con người lưu giữ tới ngày nay ',
         money: '999.000 vnđ',
         fullstar: '<i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>',
         halfstar: '<i class="fa-solid fa-star-half-stroke"></i>',
-        value: '4'
-    }),
-    listFood({
+        id: '4'
+    },
+    {
         image: '../img/product_5.png',
         title: 'Món ăn mắc ca ca',
         description: 'Cực phẩn trong làng ẩm thực trung hoa, hội tụ đầy đủ hương vị dân tộc',
         money: '99.000 vnđ',
         fullstar: '<i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>',
         halfstar: '<i class="fa-solid fa-star-half-stroke"></i>',
-        value: '5'
-    }),
-    listFood({
+        id: '5'
+    },
+    {
         image: '../img/product_6.png',
         title: 'Cá sốt ',
         description: 'Yêu ngay từ cái nhìn đầu tiên',
         money: '650.000 vnđ',
         fullstar: '<i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>',
         halfstar: '<i class="fa-solid fa-star-half-stroke"></i>',
-        value: '6'
-    })
-    
+        id: '6'
+    }
 ]
+//  lọc qua các đối tượng trong mảng
+var a = listFood.map(food => {
+   
+    return `
+                <div class="manh__food">
+                    <img src="${food.image}" alt="" class="manh__food-img">
+                    <div class="manh__food-star">
+                        ${food.fullstar}
+                        ${food.halfstar}
+                    </div>
+                    <h2 class="manh__food-title">${food.title}</h2>
+                    <p class="manh__food-description">${food.description}</p>
+                    <div class="manh__food-cost">
+                        <p class="manh__food-money">${food.money}</p>
+                        <i onclick = " for( j = ${food.id} -1; j <= a.length; j++) {
+                            console.log(j)
+                            break;
+                        }" class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                </div>
 
-console.log(list.map(function(){}))
+                `
+})
 
+// In ra ngoài màn hình html
+let main = document.getElementById('manh-js')
+main.innerHTML = a.join()
 
+//  lắng nghe click vào giỏ hàng
+var carts = document.querySelectorAll('.manh__food-cost i')
 
-// var carts = document.querySelector(".manh__food-cart i")
-// console.log('target')
-
-// carts.onclick = function(e) {
-//     var a = carts.parentNode
-//     console.log()
-
+// function listCart() {
+//     for( j = 0; j < a.length; j++) {
+//         console.log(a[j])
+//     }
 // }
 
+// lấy id của các sản phẩm trong list
+function getListFood() {
+    return new Promise(function(resolve) {
+        setTimeout(function() {
+            resolve(listFood);
+        }, 1000);
+    })
+} 
 
-
-// function getListFood() {
-//     return new Promise(function(resolve) {
-//         setTimeout(function() {
-//             resolve(listFood);
-//         }, 1000);
-//     })
-// } 
-
-// getListFood()
-//     .then(function(listFood) {
-//         var listId = listFood.map(function(listFoods){
-//             return listFoods;
-//         })
-//         console.log(listId)
-//     })
-
+getListFood()
+    .then(function(listFood) {
+        var listId = listFood.map(function(listFoods){
+            return listFoods;
+        })
+       for ( i = 0 ; i < listId.length; i++) {
+        console.log(listId[i].id)
+       }
+    })
 
 
 
 
 
 //  ae khac cmt nhu nay roi add vao nhe
+
