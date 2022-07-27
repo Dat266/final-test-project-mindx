@@ -38,7 +38,7 @@ function listFood ({
 
 var list =  [
     listFood({
-        image: '/img/product_1.png',
+        image: '../img/product_1.png',
         title: 'Nem phượng hoàng',
         description: 'Là đặc sản nổi tiếng của Hà Nội, với hương vị hết sức là thân quen!',
         money: '350.000 vnđ',
@@ -47,7 +47,7 @@ var list =  [
         value: '1'
     }),
 listFood({
-        image: '/img/product_2.png',
+        image: '../img/product_2.png',
         title: 'Trứng vàng kin lâu',
         description: 'Một loại trứng đáng rất được giới tài phiệt săn đón cho mỗi buổi sáng',
         money: '550.000 vnđ',
@@ -56,7 +56,7 @@ listFood({
     value: '2'
     }),
     listFood({
-        image: '/img/product_3.png',
+        image: '../img/product_3.png',
         title: 'Salad tây âu',
         description: 'Là món ăn nhanh rất được ưa chuộng vào mỗi buổi sáng tại châu âu',
         money: '290.000 vnđ',
@@ -64,7 +64,7 @@ listFood({
         value: '3'
     }),
     listFood({
-        image: '/img/product_4.png',
+        image: '../img/product_4.png',
         title: 'Humberger hoàng gia',
         description: 'là thức ăn nhanh có từ những năm thế chiến thứ 2 còn đươc con người lưu giữ tới ngày nay ',
         money: '999.000 vnđ',
@@ -73,7 +73,7 @@ listFood({
         value: '4'
     }),
     listFood({
-        image: '/img/product_5.png',
+        image: '../img/product_5.png',
         title: 'Món ăn mắc ca ca',
         description: 'Cực phẩn trong làng ẩm thực trung hoa, hội tụ đầy đủ hương vị dân tộc',
         money: '99.000 vnđ',
@@ -82,7 +82,7 @@ listFood({
         value: '5'
     }),
     listFood({
-        image: '/img/product_6.png',
+        image: '../img/product_6.png',
         title: 'Cá sốt ',
         description: 'Yêu ngay từ cái nhìn đầu tiên',
         money: '650.000 vnđ',
