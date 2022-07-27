@@ -1,5 +1,5 @@
 const btnRgister = document.querySelector("#btnregister");
-let users = [];
+
 btnRgister.onsubmit = (e) => {
   e.preventDefault();
   const fullName1 = document.getElementById("registerName");
@@ -17,7 +17,9 @@ btnRgister.onsubmit = (e) => {
   if (password.length < 8 && confirmpassword.length < 8)
     return alert("Vui lòng nhập mật khẩu trên 8 kí tự!");
   if (password != confirmpassword) return alert("Mật khẩu không trùng khớp!");
-  const exist = users.find((e) => email === e.email);
+  const exist = (JSON.parse(localStorage.getItem("Users")) || []).find(
+    (e) => email === e.email
+  );
   if (exist) return alert("Email đã tồn tại!");
   const user = {
     fullname,
@@ -25,7 +27,6 @@ btnRgister.onsubmit = (e) => {
     age,
     password,
   };
-  users.push(user);
   alert("Đăng kí thành công!");
   fullName1.value = "";
   email1.valuel = "";
@@ -33,7 +34,9 @@ btnRgister.onsubmit = (e) => {
   pw.value = "";
   cpw.value = "";
   fullName1.focus();
-  localStorage.setItem("Users", JSON.stringify(users));
-  //window.location.pathname = "./login.html";
-  console.log(users);
+  localStorage.setItem(
+    "Users",
+    JSON.stringify([...(JSON.parse(localStorage.getItem("Users")) || []), user])
+  );
+  window.location.href = "../html/login.html";
 };
