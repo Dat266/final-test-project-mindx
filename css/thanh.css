@@ -1,0 +1,109 @@
+.header {
+    display: flex;
+    background-color: aliceblue;
+    height: 3cm;
+    color: var(--black-color);
+    width: auto;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 25px;
+}
+.header__logo {
+    margin: auto 30px;
+    border: 2px solid var(--black-color);
+    padding:  10px 20px;
+    border-radius: 10px;
+    font-weight: 900;
+}
+    .header__logo a {
+        text-decoration: none;
+        color: var(--black-color)
+        
+    }
+.header__list-item {
+    display: flex;
+    list-style: none;
+}
+.header__list-item li{
+    margin: auto 10px;
+    list-style: none;
+}
+.header__list-item li a {
+    text-decoration: none;
+    color: var(--black-color);
+}
+.header__list-item li a:hover {
+    color: #444;
+    position: 0.5;
+    cursor: pointer;
+}
+.header__icons i {
+    margin: auto 20px;
+}
+.header__icons i:hover{
+    color: #444;
+    cursor: pointer;
+}
+/* body */
+.thanh__body {
+    background-image: url(../img/banner.png) ;
+    /* background-size: 100%; */
+    background-size: 100vh;
+    /* width: 100%; */
+    background-repeat: no-repeat;
+    background-position: center;
+    /* height: 13cm; */
+    display: flex;
+}
+.thanh__banner {
+    flex: 1;
+    margin-left: 5%;
+    align-self: center;
+    font-size: 2rem;
+    line-height: 4rem;
+    color: var(--white-color);
+}
+.thanh__btn button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 5px 5px rgba(243, 238, 238, 0.3);
+    background-color: var(--background-color);
+    color: var(--white-color);
+    font-size: 20px;
+    
+}
+.thanh__btn{
+    display: flex;
+    align-items:flex-end;
+}
+.thanh__btn button:hover {
+    background-color: yellow;
+    opacity: 0.8;
+    color: rgb(241, 60, 36);
+    cursor: pointer;
+}
+.thanh__img{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.thanh__img img {
+    margin: auto 10px;
+    width: 70px;
+}
+.thanh__img img:hover {
+    animation: animation ease-in 0.5s;
+    cursor: pointer;
+}
+@keyframes animation {
+    0% {
+        transform: translateY(5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@media only screen and (min-width: 768px) {
+    
+}
