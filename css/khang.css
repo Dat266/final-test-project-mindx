@@ -11,7 +11,7 @@ body{
     align-items: center;
     min-height: 100vh;
     flex-direction: column;
-    background: url(https://media.cooky.vn/images/blog-2016/nghe-thuat-trinh-bay-va-chup-anh-mon-an%209.jpg);
+    /* background: url(https://media.cooky.vn/images/blog-2016/nghe-thuat-trinh-bay-va-chup-anh-mon-an%209.jpg); */
 }
 footer{
     position: relative;

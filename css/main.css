@@ -12,9 +12,9 @@
 body,
 html {
   font-size: 62.5%;
-    line-height: 1.6 rem;
-    font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
+  line-height: 1.6 rem;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
   background-color: beige;
   color: #fff;
 }
@@ -43,7 +43,7 @@ main {
 /* Danh sách món ăn */
 #manh {
   text-align: center;
-  max-width: 120rem;
+  /* max-width: 120rem; */
   margin: auto;
   /* display: none; */
 }
@@ -76,10 +76,11 @@ main {
 
 @keyframes imganimation {
   to {
-      transform: translateY(0);
+    transform: translateY(0);
   }
+
   from {
-      transform: translateY(3px);
+    transform: translateY(3px);
   }
 }
 
@@ -155,6 +156,7 @@ main {
   color: red;
   background-color: #888;
 }
+
 .myproduct {
   font-size: 35px;
   color: var(--black-color);

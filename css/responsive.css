@@ -1,0 +1,52 @@
+/* Extra small devices (phones, 480px and down) */
+@media only screen and (max-width: 480px) {
+    /* responsive cua manh */
+    #manh {
+        max-width: 300px;
+    }
+
+    .myproduct {
+        font-size: 23px;
+    }
+
+
+}
+
+/* Medium devices (481px - 767px) */
+@media only screen and (min-width: 481px) {
+
+    /* responsive cua manh */
+    #manh {
+        max-width: 400px;
+    }
+
+    .myproduct {
+        font-size: 28px;
+    }
+
+}
+
+/* Medium devices (768px - 1190px) */
+@media only screen and (min-width: 768px) {
+
+    /* responsive cua manh */
+    #manh {
+        max-width: 900px;
+    }
+
+    .myproduct {
+        font-size: 30px;
+    }
+
+}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    /* responsive cua manh */
+
+    #manh {
+        max-width: 1100px;
+    }
+
+}
