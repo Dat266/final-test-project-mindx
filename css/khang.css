@@ -1,9 +1,14 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Roboto;
+:root {
+  --white-color: #fff;
+  --black-color: #000;
+  --background-color: #444;
 }
+
+* {
+  box-sizing: inherit;
+  margin: 0
+}
+
 
 body{
     display: flex;
@@ -11,7 +16,9 @@ body{
     align-items: center;
     min-height: 100vh;
     flex-direction: column;
-    /* background: url(https://media.cooky.vn/images/blog-2016/nghe-thuat-trinh-bay-va-chup-anh-mon-an%209.jpg); */
+    font-size: 20px;
+    
+    background: url(/img/backgound.jpg) ;
 }
 footer{
     position: relative;
@@ -122,6 +129,8 @@ footer .container .noi-dung.about p{
     color: #fff;
     font-weight: 500;
     margin-bottom: 15px;
+    font-size: 30px;
+    
 }
 .contact h2::before{
     content: '';
@@ -131,6 +140,7 @@ footer .container .noi-dung.about p{
     width: 50px;
     height: 2px;
     background: #f00;
+    
 }
 .contact{
     width: calc(35% - 60px);
