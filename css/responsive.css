@@ -1,5 +1,6 @@
 /* Extra small devices (phones, 480px and down) */
 @media only screen and (max-width: 480px) {
+
     /* responsive cua manh */
     #manh {
         max-width: 300px;
@@ -9,11 +10,30 @@
         font-size: 23px;
     }
 
+    /* sale */
+    #saleoff {
+        display: block;
+        height: auto;
+    }
+
+    #saleoff .box-left {
+        min-height: 200px;
+    }
+
+    #saleoff .box-left span:nth-child(1) {
+        font-size: 30px;
+        margin: 0px 0 25px;
+    }
+
+    #saleoff .box-left span:nth-child(2) {
+        font-size: 55px;
+    }
+
 
 }
 
 /* Medium devices (481px - 767px) */
-@media only screen and (min-width: 481px) {
+@media only screen and (min-width: 481px) and (max-width: 767px) {
 
     /* responsive cua manh */
     #manh {
@@ -24,10 +44,26 @@
         font-size: 28px;
     }
 
+    /* sale */
+    #saleoff {
+        display: block;
+        height: auto;
+    }
+
+    #saleoff .box-left span:nth-child(1) {
+        font-size: 40px;
+        margin: 40px 0 20px;
+    }
+
+    #saleoff .box-left span:nth-child(2) {
+        font-size: 65px;
+    }
+
+
 }
 
 /* Medium devices (768px - 1190px) */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
 
     /* responsive cua manh */
     #manh {
@@ -36,6 +72,21 @@
 
     .myproduct {
         font-size: 30px;
+    }
+
+    /* sale */
+    #saleoff {
+        display: flex;
+        height: 332px;
+    }
+
+    #saleoff .box-left span:nth-child(1) {
+        font-size: 30px;
+        margin: 40px 0 20px;
+    }
+
+    #saleoff .box-left span:nth-child(2) {
+        font-size: 50px;
     }
 
 }
@@ -47,6 +98,12 @@
 
     #manh {
         max-width: 1100px;
+    }
+
+    /* sale */
+    #saleoff {
+        display: flex;
+        height: 332px;
     }
 
 }
