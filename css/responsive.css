@@ -48,11 +48,24 @@
     #saleoff {
         display: block;
         height: auto;
+        text-align: center;
     }
+
+    #saleoff .box-left {
+        min-height: 200px;
+        /* width: 650px;
+        display: inline-block; */
+    }
+
+
+    /* #saleoff .box-right img {
+        margin: 0 auto;
+        
+    } */
 
     #saleoff .box-left span:nth-child(1) {
         font-size: 40px;
-        margin: 40px 0 20px;
+        margin: 0px 0 10px;
     }
 
     #saleoff .box-left span:nth-child(2) {

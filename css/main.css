@@ -176,7 +176,7 @@ main {
   background: var(--background-color);
   text-align: center;
   min-height: 332px;
-  flex: 1.5;
+  flex: 1;
 }
 
 #saleoff .box-left h1 {
