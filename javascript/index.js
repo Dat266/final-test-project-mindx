@@ -54,6 +54,41 @@ var listFood = [
         id: '6'
     }
 ]
+
+// Thêm sản phẩm vào giỏ hàng
+var addToCart = function (title, money) {
+    cartList.push({
+        'title': title,
+        'money': money
+    })
+    // console.log(cartList)
+    localStorage.setItem('cartList', JSON.stringify(cartList))
+    
+}
+var favouristFood = JSON.parse(localStorage.getItem('cartList'))
+console.log(favouristFood)
+
+var cartList = []
+// console.log(cartList)
+
+if(favouristFood) {
+    var bcart = favouristFood.map( listCart => {
+        return `
+                    <div class="manh__food">
+                        <h2 class="manh__food-title">${listCart.title}</h2>
+                        <div class="manh__food-cost">
+                            <p class="manh__food-money">${listCart.money}</p>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                    </div>
+    
+                    `
+    })
+    let mainCart = document.getElementById('testCart')
+    mainCart.innerHTML = bcart.join()
+
+}
+
 //  lọc qua các đối tượng trong mảng
 var a = listFood.map(food => {
    
@@ -68,10 +103,8 @@ var a = listFood.map(food => {
                     <p class="manh__food-description">${food.description}</p>
                     <div class="manh__food-cost">
                         <p class="manh__food-money">${food.money}</p>
-                        <i onclick = " for( j = ${food.id} -1; j <= a.length; j++) {
-                            console.log(j)
-                            break;
-                        }" class="fa-solid fa-cart-shopping"></i>
+                        <i onclick = "addToCart('${food.title}','${food.money}')" 
+                        class="fa-solid fa-cart-shopping"></i>
                     </div>
                 </div>
 
@@ -82,14 +115,6 @@ var a = listFood.map(food => {
 let main = document.getElementById('manh-js')
 main.innerHTML = a.join()
 
-//  lắng nghe click vào giỏ hàng
-var carts = document.querySelectorAll('.manh__food-cost i')
-
-// function listCart() {
-//     for( j = 0; j < a.length; j++) {
-//         console.log(a[j])
-//     }
-// }
 
 // lấy id của các sản phẩm trong list
 function getListFood() {
