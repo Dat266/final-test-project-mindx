@@ -75,6 +75,7 @@ if(favouristFood) {
     var bcart = favouristFood.map( listCart => {
         return `
                     <div class="manh__food">
+                        <h1>Số Lượng </h1>
                         <h2 class="manh__food-title">${listCart.title}</h2>
                         <div class="manh__food-cost">
                             <p class="manh__food-money">${listCart.money}</p>
