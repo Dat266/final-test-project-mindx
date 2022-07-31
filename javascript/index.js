@@ -129,7 +129,7 @@ var a = listFood.map(food => {
             <h2 class="manh__food-title">${food.title}</h2>
             <p class="manh__food-description">${food.description}</p>
             <div class="manh__food-cost">
-                <p class="manh__food-money">${food.money}</p>
+                <p class="manh__food-money">${food.money} VND</p>
                 <i onclick = "addToCart('${food.title}','${food.money}','${food.image}')" 
                 class="fa-solid fa-cart-shopping"></i>
             </div>
