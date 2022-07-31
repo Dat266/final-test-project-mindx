@@ -11,7 +11,6 @@
 
 body,
 html {
-  font-size: 62.5%;
   line-height: 1.6 rem;
   font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
@@ -43,15 +42,11 @@ main {
 /* Danh sách món ăn */
 #manh {
   text-align: center;
-  /* max-width: 120rem; */
   margin: auto;
-  /* display: none; */
 }
 
 #manh-js {
   margin: 0px 0;
-  /* max-height: 500px; */
-  /* overflow: hidden; */
 }
 
 .manh__food {
@@ -135,11 +130,6 @@ main {
   font-size: 15px;
 }
 
-.manh__btn {
-  /* padding-top: 100px; */
-
-}
-
 .manh__btn-list {
   width: 50px;
   height: 50px;
@@ -196,8 +186,116 @@ main {
 }
 
 #saleoff .box-right {
-  /* background-image: url(../img/banner2.png);
-  background-repeat: no-repeat; */
   float: left;
-  /* flex: 1; */
+}
+
+/* giỏ hàng */
+
+.header__cart-text{
+  font-size: 16px;
+  font-weight: 400;
+  padding: 18px 6px 10px 12px;
+  border-bottom: 1px solid rgb(139, 138, 138);
+  text-align: left;
+  cursor:text;
+}
+
+.header__cart-item {
+  display: flex;
+}
+
+.header__cart-img {
+  width: 80px;
+  margin: 12px;
+  border: 1px solid #e8e8e8;
+  box-shadow: 0 0px 4px 1px rgba(14, 10, 10, 0.8);
+}
+
+.header__cart-item:hover {
+  background-color: #ccc;
+}
+
+.header__cart-item-head {
+  width: 100%;
+  margin: auto 12px auto 0;
+}
+
+.header__cart-item-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.header__cart-item-name {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--black-color);
+}
+
+.header__cart-item-wrap {
+  line-height: 1.2rem;
+}
+
+.header__cart-item-price {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--black-color);
+}
+
+.header__cart-item-multiply {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color:orangered;
+  margin: 0 4px;
+}
+
+.header__cart-item-qnt {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--black-color);
+}
+
+.header__cart-item-body {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.header__cart-item-discription {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: rgb(146, 140, 140);
+}
+
+.header__cart-item-remove {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--black-color);
+  cursor: pointer;
+}
+.header__cart-item-remove:hover {
+  color:orangered;
+
+}
+
+.header__cart-btn {
+  background-color: orangered;
+  color: var(--white-color);
+  border: none;
+  font-size: 15px;
+  padding: 8px;
+  margin: 0 12px 6px auto;
+  border-radius: 5px;
+  display: flex;
+}
+
+.header__cart-btn:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+/*  */
+.haveItem {
+  display: none;
 }
