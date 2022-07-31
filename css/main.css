@@ -50,21 +50,22 @@ main {
 }
 
 .manh__food {
-  width: 280px;
+  width: 400px;
   background-color: var(--background-color);
   border-radius: 7px;
   display: inline-block;
   text-align: center;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  margin: 25px 15px 25px 15px;
+  margin: 25px 15px 25px 5px;
 }
 
 .manh__food-img {
-  margin: 15px 10px;
-  cursor: pointer;
+  margin: 20px 0 20px 0;
+  width: 350px;
+  /* cursor: text; */
 }
 
-.manh__food-img:hover {
+.manh__food:hover {
   animation: imganimation linear .5s;
 
 }
@@ -81,28 +82,28 @@ main {
 
 .manh__food-star {
   color: yellow;
-  font-size: 15px;
-  margin-bottom: 30px;
+  font-size: 20px;
+  margin-bottom: 40px;
 
 }
 
 .manh__food-star i {
-  margin: 0 5px;
+  margin: 0 10px;
 }
 
 .manh__food-title {
   color: rgb(245, 96, 96);
-  font-size: 20px;
-  margin-bottom: 15px;
+  font-size: 25px;
+  margin-bottom: 30px;
   font-weight: 400;
 }
 
 .manh__food-description {
   color: var(--white-color);
-  font-size: 15px;
-  margin: 0 10px 30px 10px;
+  font-size: 17px;
+  margin: 0 30px 50px 30px;
   text-align: justify;
-  line-height: 17px;
+  line-height: 30px;
   max-height: 40px;
   min-height: 35px;
   font-weight: 300;
@@ -116,7 +117,7 @@ main {
 
 .manh__food-cost i {
   color: var(--white-color);
-  font-size: 15px;
+  font-size: 20px;
   cursor: pointer;
 }
 
@@ -127,7 +128,7 @@ main {
 .manh__food-money {
   display: inline-block;
   color: red;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 .manh__btn-list {
@@ -137,7 +138,7 @@ main {
   font-size: 20px;
   background-color: var(--background-color);
   color: var(--white-color);
-  margin: 20px 10px 70px;
+  margin: 20px 20px 70px;
   cursor: pointer;
   border: none;
 }
@@ -190,6 +191,9 @@ main {
 }
 
 /* giỏ hàng */
+#testCart {
+  color: #fff;
+}
 
 .header__cart-text{
   font-size: 16px;

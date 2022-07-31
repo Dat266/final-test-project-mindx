@@ -23,13 +23,14 @@ var listFood = [
         title: 'Salad tây âu',
         description: 'Là món ăn nhanh rất được ưa chuộng vào mỗi buổi sáng tại châu âu',
         money: 290000,
-        fullstar: '<i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>',
+        fullstar: '<i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>',
+        halfstar: '<i class="fa-solid fa-star-half-stroke"></i>',
         id: '3'
     },
     {
         image: '../img/product_4.png',
         title: 'Humberger hoàng gia',
-        description: 'là thức ăn nhanh có từ những năm thế chiến thứ 2 còn đươc con người lưu giữ tới ngày nay ',
+        description: 'Là thức ăn nhanh có từ những năm thế chiến thứ 2 còn đươc con người lưu giữ tới ngày nay ',
         money: 999000,
         fullstar: '<i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>',
         halfstar: '<i class="fa-solid fa-star-half-stroke"></i>',
@@ -40,7 +41,7 @@ var listFood = [
         title: 'Món ăn mắc ca ca',
         description: 'Cực phẩn trong làng ẩm thực trung hoa, hội tụ đầy đủ hương vị dân tộc',
         money:99000,
-        fullstar: '<i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>',
+        fullstar: '<i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>',
         halfstar: '<i class="fa-solid fa-star-half-stroke"></i>',
         id: '5'
     },
@@ -63,7 +64,11 @@ var addToCart = function (title, money,image) {
         'image': image
     })
     // lưu vào local
-    localStorage.setItem('cartList', JSON.stringify(cartList))
+localStorage.setItem('cartList', JSON.stringify(cartList))
+    // xóa khỏi local
+var removeFood = function() {
+    localStorage.removeItem('cartList')
+}
     
 }
 // lay ra từ local
@@ -91,7 +96,7 @@ if(favouristFood) {
 
                 <h4 class="header__cart-item-name">${listCart.title}</h4>
                 <div class="header__cart-item-wrap">
-                    <span class="header__cart-item-price">${listCart.money}</span>
+                    <span class="header__cart-item-price">${listCart.money} vnd</span>
                     <span class="header__cart-item-multiply">x</span>
                     <span class="header__cart-item-qnt">3</span>
                 </div>
@@ -100,11 +105,10 @@ if(favouristFood) {
                 <span class="header__cart-item-discription">
                     Phân hoại: Food
                 </span>
-                <span class="header__cart-item-remove">Xóa</span>
+                <span onclick = "removeFood(bcart)" class="header__cart-item-remove">Xóa</span>
             </div>
         </div>
-    </li>
-    `
+    </li>`
     })
 
     let mainCart = document.getElementById('testCart')
@@ -115,6 +119,8 @@ if(favouristFood) {
     noCart.classList.add('haveItem')
 
 }
+
+
 
 //  lọc qua các đối tượng trong mảng
 var a = listFood.map(food => {
