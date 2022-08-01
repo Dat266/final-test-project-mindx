@@ -116,7 +116,7 @@ if(favouristFood) {
 
 }else{
     cart.classList.add('haveItem')
-    noCart.classList.add('haveItem')
+    noCart.classList.remove('haveItem')
 
 }
 
