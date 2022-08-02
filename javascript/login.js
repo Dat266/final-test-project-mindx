@@ -9,7 +9,11 @@ btnLogin.onsubmit = (e) => {
   const handleValidate = data.find(
     (user) => user.email === email && user.password === password
   );
+  console.log(handleValidate);
+
   if (!handleValidate) return alert("Vui lòng kiểm tra lại!");
 
   alert("Đăng nhập thành công!");
+  localStorage.setItem("userLogin", JSON.stringify(handleValidate));
+  window.location.href = "./";
 };
