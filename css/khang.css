@@ -135,6 +135,18 @@ footer .container .noi-dung.about p{
     color: #fff;
     font-size: 20px;
 }
+.fa-facebook{
+    color: #1877F2;
+}
+.fa-twitter{
+    color: #1DA1F2;
+}
+.fa-instagram{
+    color: #E4405F;
+}
+.fa-youtube{
+    color: #CD201F;
+}
 .links h2{
     position: relative;
     color: #fff;
