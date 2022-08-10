@@ -1,374 +1,347 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-    <link rel="stylesheet" href="../css/main.css" />
-    <link
-      rel="stylesheet"
-      href="../font/fontawesome-free-6.1.1-web/css/all.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../css/tho.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="../css/khang.css" />
-    <link rel="stylesheet" href="../css/thanh.css" />
-    <link rel="stylesheet" href="../css/responsive.css" />
-  </head>
 
-  <body>
-    <!-- header -->
-    <header class="header">
-      <div class="header__logo">
-        <a href="index.html">
-          <i class="bi bi-incognito"></i>
-          SaltBea
-        </a>
-      </div>
-      <div class="header__list">
-        <ul class="header__list-item">
-          <li><a href="index.html">Trang chủ</a></li>
-          <li><a href="#manh">Sản phẩm</a></li>
-          <li><a href="#tho__comment_user">Đánh giá</a></li>
-          <li><a href="#container">Liên hệ</a></li>
-        </ul>
-      </div>
-      <!-- header cart -->
-      <div class="header__icons">
-        <div id="delete"></div>
-        <a href="./login.html"> <i class="fa-solid fa-circle-user"></i></a>
-        <div class="header__cart-wrap">
-          <i class="fa-solid fa-cart-shopping" id="cart-icon">
-            <div class="header__cart-list header__cart-list--no-cart">
-              <div id="header__cart-list-cart">
-                <p class="header__cart-text">
-                  Danh sách sản phẩm của bạn tại đây
-                </p>
-                <div id="testCart"></div>
-              </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../font/fontawesome-free-6.1.1-web/css/all.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/tho.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="../css/khang.css" />
+  <link rel="stylesheet" href="../css/thanh.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
 
-              <img
-                src="../img/no-cart.jpg"
-                alt=""
-                id="header__cart-no-cart-img"
-              />
-              <div class="footer-item" style="display: none">
-                <p
-                  class="h3"
-                  style="
+<body>
+  <!-- header -->
+  <header class="header">
+    <div class="header__logo">
+      <a href="index.html">
+        <i class="bi bi-incognito"></i>
+        SaltBea
+      </a>
+    </div>
+    <div class="header__list">
+      <ul class="header__list-item">
+        <li><a href="index.html">Trang chủ</a></li>
+        <li><a href="#manh">Sản phẩm</a></li>
+        <li><a href="#tho__comment_user">Đánh giá</a></li>
+        <li><a href="#container">Liên hệ</a></li>
+      </ul>
+    </div>
+    <!-- header cart -->
+    <div class="header__icons">
+      <div id="delete"></div>
+      <a href="./login.html"> <i class="fa-solid fa-circle-user"></i></a>
+      <div class="header__cart-wrap">
+        <i class="fa-solid fa-cart-shopping" id="cart-icon">
+          <div class="header__cart-list header__cart-list--no-cart">
+            <div id="header__cart-list-cart">
+              <p class="header__cart-text">
+                Danh sách sản phẩm của bạn tại đây
+              </p>
+              <div id="testCart"></div>
+            </div>
+
+            <img src="../img/no-cart.jpg" alt="" id="header__cart-no-cart-img" />
+            <div class="footer-item" style="display: none">
+              <p class="h3" style="
                     margin: 10px;
                     font-size: 17px;
                     font-family: 'FontAwesome';
-                  "
-                >
-                  TOTAL: <span id="total" style="margin: 0 5px"></span> VND
-                </p>
-                <button id="cash" onclick="handlerCash()">Thanh toán</button>
-              </div>
+                  ">
+                TOTAL: <span id="total" style="margin: 0 5px"></span> VND
+              </p>
+              <button id="cash" onclick="handlerCash()">Thanh toán</button>
             </div>
-          </i>
+          </div>
+        </i>
+      </div>
+    </div>
+  </header>
+
+  <!-- body -->
+  <div class="thanh__body">
+    <!-- <img src="../img/banner.png" alt=""> -->
+    <div class="thanh__banner">
+      <div class="thanh__content">
+        <h1>
+          THỨC ĂN <br />
+          THƯỢNG HẠNG
+        </h1>
+        <h1></h1>
+        <p>
+          Chuyên cung cấp các món ăn đảm bảo dinh dưỡng hợp vệ sinh đến người
+          tiêu dùng. Phục vụ người dùng một cách hoàn hảo nhất!
+        </p>
+        <div class="thanh__btn">
+          <button>Mua ngay</button>
         </div>
       </div>
-    </header>
-
-    <!-- body -->
-    <div class="thanh__body">
-      <!-- <img src="../img/banner.png" alt=""> -->
-      <div class="thanh__banner">
-        <div class="thanh__content">
-          <h1>
-            THỨC ĂN <br/>
-            THƯỢNG HẠNG
-          </h1>
-          <h1></h1>
-          <p>
-            Chuyên cung cấp các món ăn đảm bảo dinh dưỡng hợp vệ sinh đến người
-            tiêu dùng. Phục vụ người dùng một cách hoàn hảo nhất!
-          </p>
-          <div class="thanh__btn">
-            <button>Mua ngay</button>
-          </div>
-        </div>
     </div>
     <div class="thanh__img">
       <img class="img1" src="../img/img_1.png" alt="" />
       <img class="img2" src="../img/img_2.png" alt="" />
       <img class="img3" src="../img/img_3.png" alt="" />
     </div>
+  </div>
+
+  <div class="contaiver"></div>
+
+  <!-- danh muc san pham -->
+  <div id="manh">
+    <h1 class="myproduct">SẢN PHẨM CỦA CHÚNG TÔI</h1>
+    <div id="manh-js"></div>
+    <div class="manh__btn">
+      <button class="manh__btn-list">1</button>
+      <button class="manh__btn-list">2</button>
+      <button class="manh__btn-list">3</button>
+      <button class="manh__btn-list">4</button>
     </div>
+  </div>
 
-    <div class="contaiver"></div>
-
-    <!-- danh muc san pham -->
-    <div id="manh">
-      <h1 class="myproduct">SẢN PHẨM CỦA CHÚNG TÔI</h1>
-      <div id="manh-js"></div>
-      <div class="manh__btn">
-        <button class="manh__btn-list">1</button>
-        <button class="manh__btn-list">2</button>
-        <button class="manh__btn-list">3</button>
-        <button class="manh__btn-list">4</button>
-      </div>
+  <!-- sale -->
+  <div id="saleoff">
+    <div class="box-left">
+      <h1>
+        <span>GIẢM GIÁ LÊN ĐẾN</span>
+        <span>45%</span>
+      </h1>
     </div>
-
-    <!-- sale -->
-    <div id="saleoff">
-      <div class="box-left">
-        <h1>
-          <span>GIẢM GIÁ LÊN ĐẾN</span>
-          <span>45%</span>
-        </h1>
-      </div>
-      <div class="box-right">
-        <img src="../img/banner2.png" alt="" />
-      </div>
+    <div class="box-right">
+      <img src="../img/banner2.png" alt="" />
     </div>
+  </div>
 
-    <!-- slider của thọ -->
-    <div id="tho__comment_user">
-      <div class="tho__first">
-        <h1>NHẬN XÉT CỦA KHÁCH HÀNG</h1>
-      </div>
-      <section>
-        <div class="swiper mySwiper tho__container">
-          <div class="swiper-wrapper tho__content">
-            <div class="swiper-slide tho__card">
-              <div class="tho__card-content">
-                <div class="tho__image">
-                  <img src="../img/img2.jfif" alt="" />
-                </div>
-                <div class="tho__name-user">
-                  <span class="tho__name">Nguyen Van A</span>
-                  <span class="tho__user-coment"
-                    >tuyệt vời,tuyệt vời,tuyệt vời,tuyệt vời,tuyệt vời,tuyệt
-                    vời,tuyệt vời,tuyệt vời.
-                  </span>
-                </div>
-                <div class="tho__rating">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                </div>
+  <!-- slider của thọ -->
+  <div id="tho__comment_user">
+    <div class="tho__first">
+      <h1>NHẬN XÉT CỦA KHÁCH HÀNG</h1>
+    </div>
+    <section>
+      <div class="swiper mySwiper tho__container">
+        <div class="swiper-wrapper tho__content">
+          <div class="swiper-slide tho__card">
+            <div class="tho__card-content">
+              <div class="tho__image">
+                <img src="../img/img2.jfif" alt="" />
+              </div>
+              <div class="tho__name-user">
+                <span class="tho__name">Nguyen Van A</span>
+                <span class="tho__user-coment">tuyệt vời,tuyệt vời,tuyệt vời,tuyệt vời,tuyệt vời,tuyệt
+                  vời,tuyệt vời,tuyệt vời.
+                </span>
+              </div>
+              <div class="tho__rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
               </div>
             </div>
-            <div class="swiper-slide tho__card">
-              <div class="tho__card-content">
-                <div class="tho__image">
-                  <img src="../img/img1.webp" alt="" />
-                </div>
-                <div class="tho__name-user">
-                  <span class="tho__name">Nguyen Van A</span>
-                  <span class="tho__user-coment"
-                    >tuyệt vời,tuyệt vời,tuyệt vời,tuyệt vời,tuyệt vời,tuyệt
-                    vời,tuyệt vời,tuyệt vời.
-                  </span>
-                </div>
-                <div class="tho__rating">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                </div>
+          </div>
+          <div class="swiper-slide tho__card">
+            <div class="tho__card-content">
+              <div class="tho__image">
+                <img src="../img/img1.webp" alt="" />
+              </div>
+              <div class="tho__name-user">
+                <span class="tho__name">Nguyen Van A</span>
+                <span class="tho__user-coment">tuyệt vời,tuyệt vời,tuyệt vời,tuyệt vời,tuyệt vời,tuyệt
+                  vời,tuyệt vời,tuyệt vời.
+                </span>
+              </div>
+              <div class="tho__rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
               </div>
             </div>
-            <div class="swiper-slide tho__card">
-              <div class="tho__card-content">
-                <div class="tho__image">
-                  <img src="../img/img4.jfif" alt="" />
-                </div>
-                <div class="tho__name-user">
-                  <span class="tho__name">Nguyen Van A</span>
-                  <span class="tho__user-coment"
-                    >tuyệt vời,tuyệt vời,tuyệt vời,tuyệt vời,tuyệt vời,tuyệt
-                    vời,tuyệt vời,tuyệt vời.
-                  </span>
-                </div>
-                <div class="tho__rating">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                </div>
+          </div>
+          <div class="swiper-slide tho__card">
+            <div class="tho__card-content">
+              <div class="tho__image">
+                <img src="../img/img4.jfif" alt="" />
+              </div>
+              <div class="tho__name-user">
+                <span class="tho__name">Nguyen Van A</span>
+                <span class="tho__user-coment">tuyệt vời,tuyệt vời,tuyệt vời,tuyệt vời,tuyệt vời,tuyệt
+                  vời,tuyệt vời,tuyệt vời.
+                </span>
+              </div>
+              <div class="tho__rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
               </div>
             </div>
-            <div class="swiper-slide tho__card">
-              <div class="tho__card-content">
-                <div class="tho__image">
-                  <img src="../img/img3.jfif" alt="" />
-                </div>
-                <div class="tho__name-user">
-                  <span class="tho__name">Nguyen Van A</span>
-                  <span class="tho__user-coment"
-                    >tuyệt vời,tuyệt vời,tuyệt vời,tuyệt vời,tuyệt vời,tuyệt
-                    vời,tuyệt vời,tuyệt vời.
-                  </span>
-                </div>
-                <div class="tho__rating">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                </div>
+          </div>
+          <div class="swiper-slide tho__card">
+            <div class="tho__card-content">
+              <div class="tho__image">
+                <img src="../img/img3.jfif" alt="" />
+              </div>
+              <div class="tho__name-user">
+                <span class="tho__name">Nguyen Van A</span>
+                <span class="tho__user-coment">tuyệt vời,tuyệt vời,tuyệt vời,tuyệt vời,tuyệt vời,tuyệt
+                  vời,tuyệt vời,tuyệt vời.
+                </span>
+              </div>
+              <div class="tho__rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
               </div>
             </div>
-            <div class="swiper-slide tho__card">
-              <div class="tho__card-content">
-                <div class="tho__image">
-                  <img src="../img/img2.jfif" alt="" />
-                </div>
-                <div class="tho__name-user">
-                  <span class="tho__name">Nguyen Van A</span>
-                  <span class="tho__user-coment"
-                    >tuyệt vời,tuyệt vời,tuyệt vời,tuyệt vời,tuyệt vời,tuyệt
-                    vời,tuyệt vời,tuyệt vời.
-                  </span>
-                </div>
-                <div class="tho__rating">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                </div>
+          </div>
+          <div class="swiper-slide tho__card">
+            <div class="tho__card-content">
+              <div class="tho__image">
+                <img src="../img/img2.jfif" alt="" />
+              </div>
+              <div class="tho__name-user">
+                <span class="tho__name">Nguyen Van A</span>
+                <span class="tho__user-coment">tuyệt vời,tuyệt vời,tuyệt vời,tuyệt vời,tuyệt vời,tuyệt
+                  vời,tuyệt vời,tuyệt vời.
+                </span>
+              </div>
+              <div class="tho__rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
               </div>
             </div>
-            <div class="swiper-slide tho__card">
-              <div class="tho__card-content">
-                <div class="tho__image">
-                  <img src="../img/img1.webp" alt="" />
-                </div>
-                <div class="tho__name-user">
-                  <span class="tho__name">Nguyen Van A</span>
-                  <span class="tho__user-coment"
-                    >tuyệt vời,tuyệt vời,tuyệt vời,tuyệt vời,tuyệt vời,tuyệt
-                    vời,tuyệt vời,tuyệt vời.
-                  </span>
-                </div>
-                <div class="tho__rating">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                </div>
+          </div>
+          <div class="swiper-slide tho__card">
+            <div class="tho__card-content">
+              <div class="tho__image">
+                <img src="../img/img1.webp" alt="" />
+              </div>
+              <div class="tho__name-user">
+                <span class="tho__name">Nguyen Van A</span>
+                <span class="tho__user-coment">tuyệt vời,tuyệt vời,tuyệt vời,tuyệt vời,tuyệt vời,tuyệt
+                  vời,tuyệt vời,tuyệt vời.
+                </span>
+              </div>
+              <div class="tho__rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
               </div>
             </div>
           </div>
         </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-      </section>
-    </div>
-
-    <!-- footer -->
-    <footer>
-      <div class="container" id="container">
-        <!--Bắt Đầu Nội Dung Giới Thiệu-->
-        <div class="noi-dung about">
-          <h2>Về Chúng Tôi</h2>
-          <p>Lorem ipsumdolor sit...</p>
-          <ul class="social-icon">
-            <li>
-              <a href=""><i class="fa-brands fa-facebook"></i></a>
-            </li>
-            <li>
-              <a href=""><i class="fa-brands fa-twitter"></i></a>
-            </li>
-            <li>
-              <a href=""><i class="fa-brands fa-instagram"></i></a>
-            </li>
-            <li>
-              <a href=""><i class="fa-brands fa-youtube"></i></a>
-            </li>
-          </ul>
-        </div>
-        <!--Kết Thúc Nội Dung Giới Thiệu-->
-        <!--Bắt Đầu Nội Dung Đường Dẫn-->
-        <div class="noi-dung links">
-          <h2>Đường Dẫn</h2>
-          <ul>
-            <li><a href="#">Trang Chủ</a></li>
-            <li><a href="#">Về Chúng Tôi</a></li>
-            <li><a href="#">Thông Tin Liên Lạc</a></li>
-            <li><a href="#">Dịch Vụ</a></li>
-            <li><a href="#">Điều Kiện Chính Sách</a></li>
-          </ul>
-        </div>
-        <!--Kết Thúc Nội Dung Đường Dẫn-->
-        <!--Bắt Đâu Nội Dung Liên Hệ-->
-        <div class="noi-dung contact">
-          <h2>Thông Tin Liên Hệ</h2>
-          <ul class="info">
-            <li>
-              <span><i class="fa fa-map-marker"></i></span>
-              <span>Việt Nam</span>
-            </li>
-            <li>
-              <span><i class="fa fa-phone"></i></span>
-              <span>
-                <a href="tel:0862732222">08 6273 2222</a>
-              </span>
-            </li>
-            <li>
-              <span><i class="fa fa-envelope"></i></span>
-              <span>
-                <a href=mailto:<hello>agentavery@sample.com</a>
-              </span>
-            </li>
-            <li>
-              <form class="form">
-                <input
-                  type="email"
-                  class="form__field"
-                  placeholder="Đăng Ký Subscribe Email"
-                />
-                <button type="button" class="btn btn--primary uppercase">
-                  Gửi
-                </button>
-              </form>
-            </li>
-          </ul>
-        </div>
-        <!--Kết Thúc Nội Dung Liên Hệ-->
       </div>
-    </footer>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </section>
+  </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 3,
-        spaceBetween: 30,
-        slidesPerGroup: 3,
-        loop: true,
-        loopFillGroupWithBlank: true,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
-    </script>
+  <!-- footer -->
+  <footer>
+    <div class="container" id="container">
+      <!--Bắt Đầu Nội Dung Giới Thiệu-->
+      <div class="noi-dung about">
+        <h2>Về Chúng Tôi</h2>
+        <p>Lorem ipsumdolor sit...</p>
+        <ul class="social-icon">
+          <li>
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+          </li>
+        </ul>
+      </div>
+      <!--Kết Thúc Nội Dung Giới Thiệu-->
+      <!--Bắt Đầu Nội Dung Đường Dẫn-->
+      <div class="noi-dung links">
+        <h2>Đường Dẫn</h2>
+        <ul>
+          <li><a href="#">Trang Chủ</a></li>
+          <li><a href="#">Về Chúng Tôi</a></li>
+          <li><a href="#">Thông Tin Liên Lạc</a></li>
+          <li><a href="#">Dịch Vụ</a></li>
+          <li><a href="#">Điều Kiện Chính Sách</a></li>
+        </ul>
+      </div>
+      <!--Kết Thúc Nội Dung Đường Dẫn-->
+      <!--Bắt Đâu Nội Dung Liên Hệ-->
+      <div class="noi-dung contact">
+        <h2>Thông Tin Liên Hệ</h2>
+        <ul class="info">
+          <li>
+            <span><i class="fa fa-map-marker"></i></span>
+            <span>Việt Nam</span>
+          </li>
+          <li>
+            <span><i class="fa fa-phone"></i></span>
+            <span>
+              <a href="tel:0862732222">08 6273 2222</a>
+            </span>
+          </li>
+          <li>
+            <span><i class="fa fa-envelope"></i></span>
+            <span>
+              <a href=mailto:<hello>agentavery@sample.com</a>
+            </span>
+          </li>
+          <li>
+            <form class="form">
+              <input type="email" class="form__field" placeholder="Đăng Ký Subscribe Email" />
+              <button type="button" class="btn btn--primary uppercase">
+                Gửi
+              </button>
+            </form>
+          </li>
+        </ul>
+      </div>
+      <!--Kết Thúc Nội Dung Liên Hệ-->
+    </div>
+  </footer>
 
-    <script src="../javascript/index.js"></script>
-  </body>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      slidesPerGroup: 3,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+
+  <script src="../javascript/index.js"></script>
+</body>
+
 </html>

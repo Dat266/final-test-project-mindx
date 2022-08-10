@@ -1,71 +1,78 @@
 :root {
-  --white-color: #fff;
-  --black-color: #000;
-  --background-color: #444;
+    --white-color: #fff;
+    --black-color: #000;
+    --background-color: #444;
 }
+
 #header {
-   width: 100%;
+    width: 100%;
 }
 
 * {
-  box-sizing: inherit;
-  margin: 0;
+    box-sizing: inherit;
+    margin: 0;
 }
+
 /* header cart*/
-.header__icons{
+.header__icons {
     position: relative;
     text-align: center;
     width: 242px;
     display: flex;
 }
+
 .noi-dung p {
     font-size: 20px;
     font-weight: 500;
     margin-top: 40px;
 }
-.header__icons .header__cart-wrap:hover .header__cart-list{
+
+.header__icons .header__cart-wrap:hover .header__cart-list {
     display: block;
 }
-.fa-cart-shopping ::after{
-    content:"";
+
+.fa-cart-shopping ::after {
+    content: "";
     position: absolute;
-    right: 0px;   
+    right: 0px;
     top: -30px;
     border-width: 20px 18px;
     border-style: solid;
     border-color: transparent transparent var(--white-color) transparent;
 }
-.header__cart-wrap{
+
+.header__cart-wrap {
     position: relative;
     display: inline-block;
 
 }
 
-.header__cart-list{
-    position:absolute;
-    top :calc(120% + 4px) ;
+.header__cart-list {
+    position: absolute;
+    top: calc(120% + 4px);
     right: 15px;
     background-color: var(--white-color);
     z-index: +1;
     width: 400px;
     border-radius: 10px;
-    box-shadow: 0 1px 3.125rem 0  rgba(0, 0, 0, .2) ;
+    box-shadow: 0 1px 3.125rem 0 rgba(0, 0, 0, .2);
     display: none;
     font-family: 'Roboto', sans-serif;
 
 }
 
-.header__cart-list--no-cart{
+.header__cart-list--no-cart {
     /* padding: 28px 0 ; */
 }
-#header__cart-no-cart-img{
+
+#header__cart-no-cart-img {
     width: 65%;
-    
+
 
 }
 
 /* footer */
-body{
+body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -74,17 +81,17 @@ body{
     font-size: 20px;
 }
 
-footer{
+footer {
     position: relative;
     width: 100%;
     height: auto;
     padding: 50px 100px;
-    background: #111;    
+    background: #111;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-footer .container{
+footer .container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -92,28 +99,28 @@ footer .container{
 }
 
 /*Thiết Lập Cho Thành Phần Nội Dung Giới Thiệu*/
-footer .container .noi-dung{
+footer .container .noi-dung {
     margin-right: 30px;
     display: inline-block;
 }
 
-footer .container .noi-dung .about{
-    width:33.33%;
+footer .container .noi-dung .about {
+    width: 33.33%;
 }
 
 footer .container .links {
-    margin:0 100px 0 auto;
+    margin: 0 100px 0 auto;
 }
 
 
-footer .container .noi-dung.about h2{
+footer .container .noi-dung.about h2 {
     position: relative;
     color: #fff;
     font-weight: 500;
     margin-bottom: 15px;
 }
 
-footer .container .noi-dung.about h2:before{
+footer .container .noi-dung.about h2:before {
     content: '';
     position: absolute;
     bottom: -5px;
@@ -123,21 +130,23 @@ footer .container .noi-dung.about h2:before{
     /* background: #f00; */
 }
 
-footer .container .noi-dung.about p{
+footer .container .noi-dung.about p {
     color: #999;
 }
 
 /*Thiết Lập Cho Thành Phần Icon Mạng Xã Hội*/
-.social-icon{
+.social-icon {
     margin-top: 20px;
     display: flex;
-    padding: unset ; 
+    padding: unset;
 }
+
 .social-icon li {
     list-style: none;
     margin: 10px 10px 0 0;
 }
-.social-icon li a{
+
+.social-icon li a {
     display: inline-block;
     width: 40px;
     height: 40px;
@@ -149,40 +158,47 @@ footer .container .noi-dung.about p{
     text-decoration: none;
     border-radius: 4px;
 }
-.social-icon li a:hover{
+
+.social-icon li a:hover {
     background: #fff;
 }
-.social-icon li a .fa{
+
+.social-icon li a .fa {
     color: #fff;
     font-size: 20px;
 }
-.fa-facebook{
+
+.fa-facebook {
     color: #1877F2;
 }
-.fa-twitter{
+
+.fa-twitter {
     color: #1DA1F2;
 }
-.fa-instagram{
+
+.fa-instagram {
     color: #E4405F;
 }
-.fa-youtube{
+
+.fa-youtube {
     color: #CD201F;
 }
-.links h2{
+
+.links h2 {
     position: relative;
     color: #fff;
     font-weight: 500;
     margin-bottom: 15px;
 }
 
-.links h2{
+.links h2 {
     position: relative;
     color: #fff;
     font-weight: 500;
     margin-bottom: 15px;
 }
 
-.links h2::before{
+.links h2::before {
     content: '';
     position: absolute;
     bottom: -5px;
@@ -192,10 +208,10 @@ footer .container .noi-dung.about p{
     /* background: #f00; */
 }
 
-.links{
-   position: relative;
-   width: 25%;
-   padding: unset;
+.links {
+    position: relative;
+    width: 25%;
+    padding: unset;
 }
 
 .links ul {
@@ -203,22 +219,22 @@ footer .container .noi-dung.about p{
     margin-top: 40px;
 }
 
-.links ul li{
+.links ul li {
     list-style: none;
 }
 
-.links ul li a{
+.links ul li a {
     color: #999;
     text-decoration: none;
     margin-bottom: 10px;
     display: inline-block;
 }
 
-.links ul li a:hover{
+.links ul li a:hover {
     color: red;
 }
 
-.contact h2{
+.contact h2 {
     position: relative;
     color: #fff;
     font-weight: 500;
@@ -226,7 +242,7 @@ footer .container .noi-dung.about p{
     font-size: 30px;
 }
 
-.contact h2::before{
+.contact h2::before {
     content: '';
     position: absolute;
     bottom: -5px;
@@ -236,30 +252,35 @@ footer .container .noi-dung.about p{
     /* background: #f00; */
 }
 
-.contact{
+.contact {
     width: calc(35% - 60px);
     margin-right: 0 !important;
 }
-.contact .info{
+
+.contact .info {
     position: relative;
     padding: unset;
     display: block;
     margin-top: 40px;
 }
-.contact .info li{
+
+.contact .info li {
     display: flex;
     margin-bottom: 16px;
     align-items: center;
 }
+
 .contact .info li span:nth-child(1) {
     color: #fff;
     font-size: 20px;
-    margin-right: 10px; 
+    margin-right: 10px;
 }
-.contact .info li span{
-    color: #999; 
+
+.contact .info li span {
+    color: #999;
 }
-.contact .info li a{
+
+.contact .info li a {
     color: #999;
     text-decoration: none;
 }
@@ -267,6 +288,7 @@ footer .container .noi-dung.about p{
 .contact .info li a:hover {
     color: red;
 }
+
 .btn {
     display: inline-block;
     background: transparent;
@@ -275,10 +297,11 @@ footer .container .noi-dung.about p{
     border: 0;
     outline: 0;
     padding: 0;
-    margin-top:16px;
+    margin-top: 16px;
     transition: all 200ms ease-in;
     cursor: pointer;
 }
+
 .btn--primary {
     background: #222;
     color: #fff;
@@ -286,13 +309,16 @@ footer .container .noi-dung.about p{
     border-radius: 2px;
     padding: 8px 24px;
 }
+
 .btn--primary:hover {
     background: red;
 }
+
 .btn--primary:active {
     background: red;
     box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, .2);
 }
+
 .form__field {
     width: 90%;
     background: #fff;
@@ -303,18 +329,25 @@ footer .container .noi-dung.about p{
     outline: 0;
     padding: 8px 4px;
 }
-@media  (max-width: 768px){
-    footer{
+
+@media (max-width: 768px) {
+    footer {
         padding: 40px;
-             }
-    footer .container{
+    }
+
+    footer .container {
         flex-direction: column;
     }
-    footer .container .noi-dung{
+
+    footer .container .noi-dung {
         margin-right: 0;
         margin-bottom: 40px;
     }
-    footer .container, .noi-dung.about, .links, .contact{
+
+    footer .container,
+    .noi-dung.about,
+    .links,
+    .contact {
         width: 100%;
     }
 }

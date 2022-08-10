@@ -72,7 +72,7 @@
         font-size: 65px;
     }
 
-   
+
 
 
 }
@@ -112,6 +112,7 @@
     .thanh__content p {
         font-size: 20px;
     }
+
     .thanh__content h1 {
         font-size: 40px;
         margin-bottom: 25px;
@@ -125,6 +126,7 @@
     .header__logo a {
         display: block;
     }
+
     .header {
         font-size: 20px;
     }
