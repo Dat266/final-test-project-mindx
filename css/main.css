@@ -10,12 +10,11 @@
 
 body,
 html {
-    /* font-size: 62.5%; */
-    line-height: 1.6 rem; 
-    font-family: sans-serif;
-    background: gray;
-    color: #fff;
-
+  line-height: 1.6 rem;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  background-color: beige;
+  color: #fff;
 }
 
 #vanta {
@@ -43,33 +42,31 @@ main {
 /* Danh sách món ăn */
 #manh {
   text-align: center;
-  /* max-width: 120rem; */
   margin: auto;
-  /* display: none; */
 }
 
 #manh-js {
   margin: 0px 0;
-  /* max-height: 500px; */
-  /* overflow: hidden; */
 }
 
 .manh__food {
-  width: 280px;
+  width: 400px;
   background-color: var(--background-color);
   border-radius: 7px;
   display: inline-block;
   text-align: center;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  margin: 25px 15px 25px 15px;
+  margin: 25px 15px 25px 5px;
+  position: relative;
 }
 
 .manh__food-img {
-  margin: 15px 10px;
-  cursor: pointer;
+  margin: 20px 0 20px 0;
+  width: 350px;
+  /* cursor: text; */
 }
 
-.manh__food-img:hover {
+.manh__food:hover {
   animation: imganimation linear .5s;
 
 }
@@ -86,28 +83,28 @@ main {
 
 .manh__food-star {
   color: yellow;
-  font-size: 15px;
-  margin-bottom: 30px;
+  font-size: 20px;
+  margin-bottom: 40px;
 
 }
 
 .manh__food-star i {
-  margin: 0 5px;
+  margin: 0 10px;
 }
 
 .manh__food-title {
   color: rgb(245, 96, 96);
-  font-size: 20px;
-  margin-bottom: 15px;
+  font-size: 25px;
+  margin-bottom: 30px;
   font-weight: 400;
 }
 
 .manh__food-description {
   color: var(--white-color);
-  font-size: 15px;
-  margin: 0 10px 30px 10px;
+  font-size: 17px;
+  margin: 0 30px 50px 30px;
   text-align: justify;
-  line-height: 17px;
+  line-height: 30px;
   max-height: 40px;
   min-height: 35px;
   font-weight: 300;
@@ -121,7 +118,7 @@ main {
 
 .manh__food-cost i {
   color: var(--white-color);
-  font-size: 15px;
+  font-size: 20px;
   cursor: pointer;
 }
 
@@ -129,15 +126,52 @@ main {
   color: yellow;
 }
 
+
+
+.input {
+  text-align: center;
+  width: 50px;
+  margin: 20px 85px 30px 90px;
+  border-radius: 3px;
+}
+.addToCart {
+  border-radius: 3px;
+  position: absolute;
+  right: 33px;
+  bottom: 30px;
+
+}
+
+.delete {
+  border-radius: 10px;
+  cursor: pointer;
+
+}
+
+.delete:hover {
+  background-color: rgb(135, 182, 189);
+  color: #fff;
+}
+
+
+#cash {
+      border-radius: 10px;
+      width: 90px;
+      height: 27px;
+      margin: 8px 10px 0 58px;
+      cursor: pointer;
+
+}
+
+#cash:hover{
+  background-color: rgb(135, 182, 189);
+  color: #fff;
+}
+
 .manh__food-money {
   display: inline-block;
   color: red;
-  font-size: 15px;
-}
-
-.manh__btn {
-  /* padding-top: 100px; */
-
+  font-size: 20px;
 }
 
 .manh__btn-list {
@@ -147,7 +181,7 @@ main {
   font-size: 20px;
   background-color: var(--background-color);
   color: var(--white-color);
-  margin: 20px 10px 70px;
+  margin: 20px 20px 70px;
   cursor: pointer;
   border: none;
 }
@@ -196,8 +230,120 @@ main {
 }
 
 #saleoff .box-right {
-  /* background-image: url(../img/banner2.png);
-  background-repeat: no-repeat; */
   float: left;
-  /* flex: 1; */
+}
+
+/* giỏ hàng */
+#testCart {
+  color: #fff;
+}
+
+.header__cart-text{
+  font-size: 16px;
+  font-weight: 400;
+  padding: 18px 6px 10px 12px;
+  border-bottom: 1px solid rgb(139, 138, 138);
+  text-align: left;
+  cursor:text;
+}
+
+.header__cart-item {
+  display: flex;
+  
+}
+
+.header__cart-img {
+  width: 80px;
+  margin: 12px;
+  border: 1px solid #e8e8e8;
+  box-shadow: 0 0px 4px 1px rgba(14, 10, 10, 0.8);
+}
+
+.header__cart-item:hover {
+  background-color: #ccc;
+}
+
+.header__cart-item-head {
+  width: 100%;
+  margin: auto 12px auto 0;
+}
+
+.header__cart-item-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.header__cart-item-name {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--black-color);
+}
+
+.header__cart-item-wrap {
+  line-height: 1.2rem;
+}
+
+.header__cart-item-price {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--black-color);
+}
+
+.header__cart-item-multiply {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color:orangered;
+  margin: 0 4px;
+}
+
+.header__cart-item-qnt {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--black-color);
+}
+
+.header__cart-item-body {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.header__cart-item-discription {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: rgb(146, 140, 140);
+}
+
+.header__cart-item-remove {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--black-color);
+  cursor: pointer;
+}
+.header__cart-item-remove:hover {
+  color:orangered;
+
+}
+
+.header__cart-btn {
+  background-color: orangered;
+  color: var(--white-color);
+  border: none;
+  font-size: 15px;
+  padding: 8px;
+  margin: 0 12px 6px auto;
+  border-radius: 5px;
+  display: flex;
+}
+
+.header__cart-btn:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+/*  */
+.haveItem {
+  display: none;
 }

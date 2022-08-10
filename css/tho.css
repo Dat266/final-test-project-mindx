@@ -58,7 +58,9 @@
 .tho__first h1 {
     font-size: 35px;
     width: 500px;
-    color: rgb(100, 100, 100);
+    color: var(--black-color);
+    font-weight: 400;
+    padding-top: 40px;
 }
 
 .swiper{

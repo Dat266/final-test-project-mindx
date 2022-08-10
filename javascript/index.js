@@ -1,15 +1,12 @@
-// render header
-
-const userLogin = JSON.parse(localStorage.getItem("userLogin"));
+//login
+const userLogin = getLocal("userLogin");
 if (userLogin) {
   const deleteE = document.getElementById("delete");
   const newElement = document.createElement("p");
-
   const newText = document.createTextNode(`Chào mừng ${userLogin.fullname}`);
   newElement.appendChild(newText);
   deleteE.appendChild(newElement);
   const button = document.createElement("button");
-  // button.style.padding = "10px 30px";
   button.style.width = "90px";
   button.style.cursor = "pointer";
   button.style.borderRadius = "7px";
@@ -17,165 +14,202 @@ if (userLogin) {
   button.className = "test";
   button.appendChild(text);
   deleteE.append(button);
-
   const newTest = document.querySelector(".test");
   newTest.addEventListener("click", handlerLogout);
 }
-//logout user
+//logout
 function handlerLogout() {
   const headerIcon = document.querySelector(".header__icons");
   const child = document.getElementById("delete");
   localStorage.removeItem("userLogin");
   headerIcon.removeChild(child);
   alert(" Bạn đã đăng xuất!");
+  renderApp();
 }
-
-// Phan manh lam
-
 var listFood = [
   {
     image: "../img/product_1.png",
     title: "Nem phượng hoàng",
     description:
       "Là đặc sản nổi tiếng của Hà Nội, với hương vị hết sức là thân quen!",
-    money: "350.000 vnđ",
+    money: 350000,
     fullstar:
       '<i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>',
     halfstar: '<i class="fa-solid fa-star-half-stroke"></i>',
-    id: "1",
+    id: 1,
   },
   {
     image: "../img/product_2.png",
     title: "Trứng vàng kin lâu",
     description:
       "Một loại trứng đáng rất được giới tài phiệt săn đón cho mỗi buổi sáng",
-    money: "550.000 vnđ",
+    money: 550000,
     fullstar:
       '<i class="fa-solid fa-star"></i>  <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>',
     halfstar: '<i class="fa-solid fa-star-half-stroke"></i>',
-    id: "2",
+    id: 2,
   },
   {
     image: "../img/product_3.png",
     title: "Salad tây âu",
     description:
       "Là món ăn nhanh rất được ưa chuộng vào mỗi buổi sáng tại châu âu",
-    money: "290.000 vnđ",
+    money: 290000,
     fullstar:
-      '<i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>',
-    id: "3",
+      '<i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>',
+    halfstar: '<i class="fa-solid fa-star-half-stroke"></i>',
+    id: 3,
   },
   {
     image: "../img/product_4.png",
     title: "Humberger hoàng gia",
     description:
-      "là thức ăn nhanh có từ những năm thế chiến thứ 2 còn đươc con người lưu giữ tới ngày nay ",
-    money: "999.000 vnđ",
+      "Là thức ăn nhanh có từ những năm thế chiến thứ 2 còn đươc con người lưu giữ tới ngày nay ",
+    money: 999000,
     fullstar:
       '<i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>',
     halfstar: '<i class="fa-solid fa-star-half-stroke"></i>',
-    id: "4",
+    id: 4,
   },
   {
     image: "../img/product_5.png",
     title: "Món ăn mắc ca ca",
     description:
       "Cực phẩn trong làng ẩm thực trung hoa, hội tụ đầy đủ hương vị dân tộc",
-    money: "99.000 vnđ",
+    money: 99000,
     fullstar:
-      '<i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>',
+      '<i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>',
     halfstar: '<i class="fa-solid fa-star-half-stroke"></i>',
-    id: "5",
+    id: 5,
   },
   {
     image: "../img/product_6.png",
     title: "Cá sốt ",
-    description: "Yêu ngay từ cái nhìn đầu tiên",
-    money: "650.000 vnđ",
+    description: "Yêu ngay từ cái nhìn đầu tiên, vị cá sốt thơm ngon đặc biệt!",
+    money: 650000,
     fullstar:
       '<i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>',
     halfstar: '<i class="fa-solid fa-star-half-stroke"></i>',
-    id: "6",
+    id: 6,
   },
 ];
-
-// Thêm sản phẩm vào giỏ hàng
-
-function addToCart(title, money) {
-  const list = {
-    title,
-    money,
-  };
-  // console.log(cartList)
-  const data = localStorage.setItem(
-    "cartList",
-    JSON.stringify([
-      ...(JSON.parse(localStorage.getItem("cartList")) || []),
-      list,
-    ])
-  );
-}
-var favouristFood = JSON.parse(localStorage.getItem("cartList"));
-
-// console.log(cartList)
-
-if (favouristFood) {
-  var bcart = favouristFood.map((listCart) => {
-    return `
-              <div class="manh__food">
-                        <h2 class="manh__food-title">${listCart.title}</h2>
-                        <div class="manh__food-cost">
-                            <p class="manh__food-money">${listCart.money}</p>
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </div>
-                    </div>
-    
-                    `;
-  });
-  let mainCart = document.getElementById("testCart");
-  mainCart.innerHTML = bcart.join();
-}
-//  lọc qua các đối tượng trong mảng
-var a = listFood.map((food) => {
-  return `
-                <div class="manh__food">
-                    <img src="${food.image}" alt="" class="manh__food-img">
-                    <div class="manh__food-star">
-                        ${food.fullstar}
-                        ${food.halfstar}
-                    </div>
-                    <h2 class="manh__food-title">${food.title}</h2>
-                    <p class="manh__food-description">${food.description}</p>
-                    <div class="manh__food-cost">
-                        <p class="manh__food-money">${food.money}</p>
-                        <i onclick = "addToCart('${food.title}','${food.money}')" 
-                        class="fa-solid fa-cart-shopping"></i>
-                    </div>
-                </div>
+function renderApp() {
+  var cartHtml = listFood
+    .map((food) => {
+      return `
+        <div class="manh__food">
+            <img src="${food.image}" alt="" class="manh__food-img">
+            <div class="manh__food-star">
+                ${food.fullstar}
+                ${food.halfstar}
+            </div>
+           <div>
+            <h2 class="manh__food-title">${food.title}</h2>
+            <p class="manh__food-description">${food.description}</p>
+            <p class="manh__food-money"><span>${food.money}</span> VND</p>
+            <input class="input qty-input" id=${food.id}  value="0" type="number"/>
+            </div>
+            <button class="addToCart" onclick="addToCart(${food.id})">Đặt hàng</button>
+        </div>
 
                 `;
-});
-
-// In ra ngoài màn hình html
-let main = document.getElementById("manh-js");
-main.innerHTML = a.join();
-
-// lấy id của các sản phẩm trong list
-function getListFood() {
-  return new Promise(function (resolve) {
-    setTimeout(function () {
-      resolve(listFood);
-    }, 1000);
-  });
+    })
+    .join("");
+  const foodDiv = document.getElementById("manh-js");
+  foodDiv.innerHTML = cartHtml;
 }
+renderApp();
+// Thêm sản phẩm vào giỏ hàng
+const imgEmty = document.getElementById("header__cart-no-cart-img");
+const renderCart = (data) => {
+  const total = document.getElementById("total");
+  const cart = document.getElementById("testCart");
+  const h3 = document.querySelector(".footer-item");
+  const cartData = getLocal("ListFoods") || [];
 
-getListFood().then(function (listFood) {
-  var listId = listFood.map(function (listFoods) {
-    return listFoods;
-  });
-  for (i = 0; i < listId.length; i++) {
-    console.log(listId[i].id);
+  const html = cartData
+    .map((list) => {
+      return `
+  <li class="header__cart-item">
+    <img src="${list.image}" alt="" class="header__cart-img">
+    <div class="header__cart-item-head">
+        <div class="header__cart-item-info">
+            <h4 class="header__cart-item-name">${list.title}</h4>
+            <div class="header__cart-item-wrap">
+                <span class="header__cart-item-price">${list.money} VND</span>
+                <span class="header__cart-item-multiply">x</span>
+                <span class="header__cart-item-qnt">${list.qty}</span>
+            </div>
+        </div>
+        <div class="header__cart-item-body">
+            <span class="header__cart-item-discription">
+                Phân hoại: Food
+            </span>
+            <button class="delete" onclick="handlerDelete(${list.id})">Xóa</button>
+        </div>
+    </div>
+  </li>
+  `;
+    })
+    .join("");
+
+  const handleTotal = cartData.reduce((prev, curr) => {
+    return (prev + curr.money) * curr.qty;
+  }, 0);
+  imgEmty.style.display = cartData.length !== 0 ? "none" : "block";
+  h3.style.display = cartData.length === 0 ? "none" : "flex";
+  total.innerHTML = handleTotal;
+  cart.innerHTML = html;
+};
+function handlerDelete(id) {
+  signleDeleteCartLocal("ListFoods", +id);
+  renderCart();
+}
+function getLocal(key) {
+  return JSON.parse(localStorage.getItem(key));
+}
+function setLocal(key, value) {
+  const oldData = getLocal(key) || [];
+  localStorage.setItem(key, JSON.stringify([...oldData, value]));
+}
+function signleDeleteCartLocal(key, id) {
+  const oldData = getLocal(key) || [];
+  localStorage.setItem(
+    key,
+    JSON.stringify(oldData.filter((data) => data.id !== id))
+  );
+}
+function updateCartLocal(key, id, newData) {
+  const oldData = getLocal(key) || [];
+  localStorage.setItem(
+    key,
+    JSON.stringify(oldData.map((data) => (data.id === id ? newData : data)))
+  );
+}
+const addToCart = (id) => {
+  const userLogin = getLocal("userLogin");
+  if (userLogin) {
+    const qtyInput = document.querySelectorAll(".qty-input");
+    const targetFood = listFood.find((food) => food.id === +id);
+    const qty = parseInt([...qtyInput].find((input) => input.id == id).value);
+    if (qty == 0) return alert("Vui lòng nhập số lượng");
+    const localItem = getLocal("ListFoods")?.find((food) => food.id === +id);
+    if (localItem) {
+      updateCartLocal("ListFoods", +id, {
+        ...localItem,
+        qty: localItem.qty + qty,
+      });
+    } else {
+      setLocal("ListFoods", { ...targetFood, qty });
+    }
+    renderCart();
+  } else {
+    return alert("Vui lòng đăng nhập");
   }
-});
+};
 
-//  ae khac cmt nhu nay roi add vao nhe
+function handlerCash() {
+  localStorage.removeItem("ListFoods");
+  renderCart();
+  alert("Thanh toán thành công!");
+}

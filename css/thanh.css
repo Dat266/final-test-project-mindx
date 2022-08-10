@@ -11,6 +11,7 @@
     font-size: 25px;
 }
 .header__logo {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     margin: auto 30px;
     border: 2px solid var(--black-color);
     padding:  10px 20px;
