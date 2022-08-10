@@ -53,6 +53,33 @@ var listFood = [
         fullstar: '<i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>',
         halfstar: '<i class="fa-solid fa-star-half-stroke"></i>',
         id: '6'
+    },
+    {
+        image: '../img/product_4.png',
+        title: 'Humberger hoàng gia',
+        description: 'Là thức ăn nhanh có từ những năm thế chiến thứ 2 còn đươc con người lưu giữ tới ngày nay ',
+        money: 999000,
+        fullstar: '<i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>',
+        halfstar: '<i class="fa-solid fa-star-half-stroke"></i>',
+        id: '4'
+    },
+    {
+        image: '../img/product_5.png',
+        title: 'Món ăn mắc ca ca',
+        description: 'Cực phẩn trong làng ẩm thực trung hoa, hội tụ đầy đủ hương vị dân tộc',
+        money:99000,
+        fullstar: '<i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>',
+        halfstar: '<i class="fa-solid fa-star-half-stroke"></i>',
+        id: '5'
+    },
+    {
+        image: '../img/product_6.png',
+        title: 'Cá sốt ',
+        description: 'Yêu ngay từ cái nhìn đầu tiên',
+        money: 650000,
+        fullstar: '<i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>',
+        halfstar: '<i class="fa-solid fa-star-half-stroke"></i>',
+        id: '6'
     }
 ]
 
