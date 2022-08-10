@@ -72,6 +72,8 @@
         font-size: 65px;
     }
 
+   
+
 
 }
 
@@ -100,6 +102,39 @@
 
     #saleoff .box-left span:nth-child(2) {
         font-size: 50px;
+    }
+
+    .header__list-item li {
+        margin: auto 10px;
+        font-size: 20px;
+    }
+
+    .thanh__content p {
+        font-size: 20px;
+    }
+    .thanh__content h1 {
+        font-size: 40px;
+        margin-bottom: 25px;
+    }
+
+    .header__logo {
+        padding: 5px 7px;
+        margin: 0 auto;
+    }
+
+    .header__logo a {
+        display: block;
+    }
+    .header {
+        font-size: 20px;
+    }
+
+    .thanh__btn {
+        margin-top: 10px;
+    }
+
+    .thanh__content h1 {
+        line-height: 50px;
     }
 
 }

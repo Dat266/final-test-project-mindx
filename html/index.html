@@ -26,7 +26,6 @@
     <link rel="stylesheet" href="../css/khang.css" />
     <link rel="stylesheet" href="../css/thanh.css" />
     <link rel="stylesheet" href="../css/responsive.css" />
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
   </head>
 
   <body>
@@ -41,9 +40,9 @@
       <div class="header__list">
         <ul class="header__list-item">
           <li><a href="index.html">Trang chủ</a></li>
-          <li><a href="#">Sản phẩm</a></li>
-          <li><a href="#">Block</a></li>
-          <li><a href="#">Liên hệ</a></li>
+          <li><a href="#manh">Sản phẩm</a></li>
+          <li><a href="#tho__comment_user">Đánh giá</a></li>
+          <li><a href="#container">Liên hệ</a></li>
         </ul>
       </div>
       <!-- header cart -->
@@ -86,11 +85,11 @@
 
     <!-- body -->
     <div class="thanh__body">
-      <!-- <img src="img/banner.png" alt=""> -->
+      <!-- <img src="../img/banner.png" alt=""> -->
       <div class="thanh__banner">
         <div class="thanh__content">
           <h1>
-            THỨC ĂN <br />
+            THỨC ĂN <br/>
             THƯỢNG HẠNG
           </h1>
           <h1></h1>
@@ -102,12 +101,12 @@
             <button>Mua ngay</button>
           </div>
         </div>
-      </div>
-      <div class="thanh__img">
-        <img class="img1" src="../img/img_1.png" alt="" />
-        <img class="img2" src="../img/img_2.png" alt="" />
-        <img class="img3" src="../img/img_3.png" alt="" />
-      </div>
+    </div>
+    <div class="thanh__img">
+      <img class="img1" src="../img/img_1.png" alt="" />
+      <img class="img2" src="../img/img_2.png" alt="" />
+      <img class="img3" src="../img/img_3.png" alt="" />
+    </div>
     </div>
 
     <div class="contaiver"></div>
@@ -138,7 +137,7 @@
     </div>
 
     <!-- slider của thọ -->
-    <div class="tho__comment_user">
+    <div id="tho__comment_user">
       <div class="tho__first">
         <h1>NHẬN XÉT CỦA KHÁCH HÀNG</h1>
       </div>
@@ -280,7 +279,7 @@
 
     <!-- footer -->
     <footer>
-      <div class="container">
+      <div class="container" id="container">
         <!--Bắt Đầu Nội Dung Giới Thiệu-->
         <div class="noi-dung about">
           <h2>Về Chúng Tôi</h2>
@@ -319,23 +318,19 @@
           <ul class="info">
             <li>
               <span><i class="fa fa-map-marker"></i></span>
-              <span
-                ><br />
-                <br />
-                Việt Nam</span
-              >
+              <span>Việt Nam</span>
             </li>
             <li>
               <span><i class="fa fa-phone"></i></span>
-              <p>
-                <a href="#"></a>
-                <br />
-                <a href="#"></a>
-              </p>
+              <span>
+                <a href="tel:0862732222">08 6273 2222</a>
+              </span>
             </li>
             <li>
               <span><i class="fa fa-envelope"></i></span>
-              <p><a href="#"></a></p>
+              <span>
+                <a href=mailto:<hello>agentavery@sample.com</a>
+              </span>
             </li>
             <li>
               <form class="form">

@@ -10,7 +10,6 @@
 * {
   box-sizing: inherit;
   margin: 0;
-
 }
 /* header cart*/
 .header__icons{
@@ -19,9 +18,10 @@
     width: 242px;
     display: flex;
 }
-p {
-    font-size: 13px;
+.noi-dung p {
+    font-size: 20px;
     font-weight: 500;
+    margin-top: 40px;
 }
 .header__icons .header__cart-wrap:hover .header__cart-list{
     display: block;
@@ -34,7 +34,6 @@ p {
     border-width: 20px 18px;
     border-style: solid;
     border-color: transparent transparent var(--white-color) transparent;
-    
 }
 .header__cart-wrap{
     position: relative;
@@ -73,9 +72,8 @@ body{
     min-height: 100vh;
     flex-direction: column;
     font-size: 20px;
-    
-  
 }
+
 footer{
     position: relative;
     width: 100%;
@@ -85,25 +83,36 @@ footer{
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
 footer .container{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     flex-direction: row;
 }
+
 /*Thiết Lập Cho Thành Phần Nội Dung Giới Thiệu*/
 footer .container .noi-dung{
     margin-right: 30px;
+    display: inline-block;
 }
-footer  .container .noi-dung.about{
-    width:40%;
+
+footer .container .noi-dung .about{
+    width:33.33%;
 }
+
+footer .container .links {
+    margin:0 100px 0 auto;
+}
+
+
 footer .container .noi-dung.about h2{
     position: relative;
     color: #fff;
     font-weight: 500;
     margin-bottom: 15px;
 }
+
 footer .container .noi-dung.about h2:before{
     content: '';
     position: absolute;
@@ -111,24 +120,28 @@ footer .container .noi-dung.about h2:before{
     left: 0;
     width: 50px;
     height: 2px;
-    background: #f00;
+    /* background: #f00; */
 }
+
 footer .container .noi-dung.about p{
     color: #999;
 }
+
 /*Thiết Lập Cho Thành Phần Icon Mạng Xã Hội*/
 .social-icon{
     margin-top: 20px;
     display: flex;
+    padding: unset ; 
 }
 .social-icon li {
     list-style: none;
+    margin: 10px 10px 0 0;
 }
 .social-icon li a{
     display: inline-block;
     width: 40px;
     height: 40px;
-    background: #222;
+    background: rgba(255, 255, 255, 0.6);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -137,7 +150,7 @@ footer .container .noi-dung.about p{
     border-radius: 4px;
 }
 .social-icon li a:hover{
-    background: #f00;
+    background: #fff;
 }
 .social-icon li a .fa{
     color: #fff;
@@ -161,12 +174,14 @@ footer .container .noi-dung.about p{
     font-weight: 500;
     margin-bottom: 15px;
 }
+
 .links h2{
     position: relative;
     color: #fff;
     font-weight: 500;
     margin-bottom: 15px;
 }
+
 .links h2::before{
     content: '';
     position: absolute;
@@ -174,32 +189,43 @@ footer .container .noi-dung.about p{
     left: 0;
     width: 50px;
     height: 2px;
-    background: #f00;
+    /* background: #f00; */
 }
+
 .links{
    position: relative;
    width: 25%;
+   padding: unset;
 }
+
+.links ul {
+    padding: unset;
+    margin-top: 40px;
+}
+
 .links ul li{
     list-style: none;
 }
+
 .links ul li a{
     color: #999;
     text-decoration: none;
     margin-bottom: 10px;
     display: inline-block;
 }
+
 .links ul li a:hover{
-    color: #fff;
+    color: red;
 }
+
 .contact h2{
     position: relative;
     color: #fff;
     font-weight: 500;
     margin-bottom: 15px;
     font-size: 30px;
-    
 }
+
 .contact h2::before{
     content: '';
     position: absolute;
@@ -207,31 +233,39 @@ footer .container .noi-dung.about p{
     left: 0;
     width: 50px;
     height: 2px;
-    background: #f00;
-    
+    /* background: #f00; */
 }
+
 .contact{
     width: calc(35% - 60px);
     margin-right: 0 !important;
 }
 .contact .info{
     position: relative;
+    padding: unset;
+    display: block;
+    margin-top: 40px;
 }
 .contact .info li{
     display: flex;
     margin-bottom: 16px;
+    align-items: center;
 }
 .contact .info li span:nth-child(1) {
     color: #fff;
     font-size: 20px;
-    margin-right: 10px;
+    margin-right: 10px; 
 }
 .contact .info li span{
-    color: #999;
+    color: #999; 
 }
 .contact .info li a{
     color: #999;
     text-decoration: none;
+}
+
+.contact .info li a:hover {
+    color: red;
 }
 .btn {
     display: inline-block;
@@ -253,10 +287,10 @@ footer .container .noi-dung.about p{
     padding: 8px 24px;
 }
 .btn--primary:hover {
-    background: #f00;
+    background: red;
 }
 .btn--primary:active {
-    background: #f00;
+    background: red;
     box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, .2);
 }
 .form__field {

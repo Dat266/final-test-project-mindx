@@ -1,8 +1,5 @@
-
-
 .header {
     display: flex;
-    background-color: aliceblue;
     height: 3cm;
     color: var(--black-color);
     width: 100%;
@@ -28,7 +25,7 @@
     list-style: none;
 }
 .header__list-item li{
-    margin: auto 10px;
+    margin: auto 46px;
     list-style: none;
 }
 .header__list-item li a {
@@ -36,7 +33,7 @@
     color: var(--black-color);
 }
 .header__list-item li a:hover {
-    color: #444;
+    color: rgb(92, 90, 90);
     position: 0.5;
     cursor: pointer;
 }
@@ -50,11 +47,12 @@
 /* body */
 .thanh__body {
     background-image: url(../img/banner.png) ;
-    width: auto;
+    width: 100%;
     min-height: 13cm;
-    /* background-repeat: no-repeat; */
+    background-repeat: no-repeat;
     background-position: center;
     display: flex;
+    background-size:cover;
 }
 .thanh__banner {
     flex: 1;
@@ -78,6 +76,7 @@
 .thanh__btn {
     display: flex;
     align-items:flex-end;
+    margin-top: 50px;
 }
 .thanh__btn button:hover {
     background-color: yellow;
@@ -89,18 +88,15 @@
     flex: 1;
     display: flex;
     justify-content: center;
- 
+    margin: auto 0;
     height: 10cm;
     /* position: absolute; */
     /* font-size: 25%; */
     
 }
 .thanh__img img {
-    margin: auto 10px;
-    width: 90px;
-    align-items: center;
-   
-
+    margin: auto 15px;
+    width: 100px;
 }
 
 .thanh__img .img1 {
@@ -113,6 +109,13 @@
 
 .thanh__img .img3 {
     animation: animation1 linear 1.5s infinite;
+}
+
+.thanh__content p {
+    font-size: 25px;
+}
+ {
+    line-height: 90px;
 }
 
 @keyframes animation1 {
@@ -185,5 +188,7 @@
         }
         .thanh__content p {
             margin: auto 12px;
+            font-size: 10px;
+            font-weight: 400;
         }
     }
