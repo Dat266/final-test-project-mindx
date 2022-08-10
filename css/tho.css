@@ -60,7 +60,9 @@
     width: 500px;
     color: var(--black-color);
     font-weight: 400;
-    padding-top: 40px;
+    margin-top: 160px;
+    background-color: rgba(68, 68, 68, 0.137);
+    text-align: center;
 }
 
 .swiper{
@@ -149,5 +151,5 @@ section .tho__card .tho__image img{
     color: black;
 }
 .swiper-button-next:after, .swiper-button-prev:after{
-    color: #333;
+    color: rgb(255, 255, 255);
 }
