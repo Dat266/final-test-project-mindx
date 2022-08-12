@@ -195,7 +195,7 @@ main {
 
 .manh__food-money {
   display: inline-block;
-  color: red;
+  color: rgb(179, 255, 0);
   font-size: 20px;
 }
 
